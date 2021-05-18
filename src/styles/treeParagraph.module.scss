@@ -1,0 +1,325 @@
+@import "@/styles/color.modules.scss";
+@import "@/styles/elevation.modules.scss";
+@import "@/styles/bouton.module.scss";
+//-------------------------- Zone Main --------------------------------//
+
+
+.containerTreeParagraph{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+// ------------------- tree container choice way
+.treeContainerChoiceWay{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem;
+    min-width: 150px;
+    height: auto;
+}
+
+//-------------------------------- tree create choice way--------------------------//
+.boutonEdith{
+     @include pirmary-btn($green-primary, $green-secondary,$green-secondary ); 
+}
+.boutonEdith:hover{
+    @include pirmary-btn($green-secondary, $green-primary,$green-primary ); 
+    box-shadow: $primary-elevation;
+}
+.boutonSave{
+    @include pirmary-btn($red-primary, $red-secondary,$red-secondary); 
+}
+.boutonSave:hover{
+    @include pirmary-btn($red-secondary, $red-primary,$red-primary); 
+}
+.boutonNew,.boutonAdd{
+    @include pirmary-btn( $blue-primary, $blue-secondary, $blue-secondary);
+} 
+.boutonNew:hover{
+    @include pirmary-btn( $blue-secondary, $blue-primary, $blue-primary);
+}
+.boutonAdd:hover{
+    @include pirmary-btn( $blue-secondary, $blue-primary, $blue-primary);
+}
+.boutonNew:disabled{
+    @include pirmary-btn($gray-primary, $gray-secondary,$gray-secondary );
+}
+
+.boutonAdd:disabled{
+    @include pirmary-btn($gray-primary, $gray-secondary,$gray-secondary );
+}
+
+.boutonEdith:disabled{
+    @include pirmary-btn($gray-primary, $gray-secondary,$gray-secondary ); 
+}
+
+
+
+.treeCreateChoiceWay {
+    display: flex;
+    flex-direction: column;
+    // margin: 1.5rem;
+   
+    align-items: center;
+    min-width: 100px;
+    height: auto;
+
+}
+.refCreateZoneTexte{
+    display: flex;
+    flex-direction: column;
+    // margin: 1.5rem;
+   
+    align-items: center;
+    width: auto;
+    padding: 1rem;
+    height: 13rem;
+    box-shadow: $primary-elevation;
+    border-radius: $primary-radius-border;
+    border:rgba(255, 255, 255, 0) solid 1px;
+
+}
+
+.treeCreateZoneTexte{
+    @extend .refCreateZoneTexte;
+    transition: $primary-transition ; 
+    // transition-timing-function: cubic-bezier(0.825, 0.185, 0.880, 0.370); 
+    
+}
+
+.treeCreateZoneTexte:hover{
+    border:  solid 1px;
+    border-color: $blue-primary;
+    box-shadow: $secondary-elevation;
+}
+
+.selectedBorder {
+    @extend .refCreateZoneTexte;
+    border-color: $red-primary;
+}
+.zoneBtnEdit{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+}
+.zoneBtnAddChoiceWayLink {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+.titleLinkChoiceWayContain{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 15rem;
+    height:2rem;
+    // background-color: rgb(221, 221, 221);
+    
+}
+.titleLinkChoiceWay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 2rem;
+    color: $black-primary;
+    background-color: $gray-primary-1;
+    border-radius: $third-radius-border;
+}
+.textIntroChoiceWayContain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15rem;
+    height: auto;
+ 
+}
+label{
+    color: $blue-secondary;
+    font-weight: bold;
+}
+
+.textIntroChoiceWay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.1rem;
+    width: 90%;
+    height:auto;
+    color: $black-primary;
+    background-color: $gray-primary-1;
+    border-radius: $third-radius-border;
+}
+
+@keyframes example {
+    from {height: 0;}
+    to {height: 5rem;}
+  }
+.txtAreaintro{
+    width: 100%;
+    height: 5rem;
+    resize: none;
+    box-shadow: $secondary-elevation;
+    animation-name: example;
+    animation-duration: 0.5s;
+}
+
+.containCreateChoiceWay{
+    height: auto;
+    width: auto;
+    
+}
+
+.textIntroChoiceWay{
+ width: 15rem;
+ height: 3rem;
+//  background-color: gray;
+ align-items: center;
+//  background-color: red;
+}
+
+.containerChoiceWay {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    // border-top: 0.1rem solid;
+   
+    // width: auto;
+  
+}
+//----------------------------------------- tree choice way -------------------------------//
+.TreeChoiceWay{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 150px;
+    height: auto;
+    // margin: 0.5rem;
+    
+ 
+}
+.containLineTree{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    height: 1rem;
+}
+.containeLineTreeSolo{
+    height: 3rem;
+}
+.lineTree{
+    width: 50%;
+    height: 100%;
+    border:black solid;
+    border-width: 0 ;
+    
+}
+.lineTreeLeft{
+    border-width: 2px 0px 0px 1px ;
+}
+.lineTreeRight{
+    border-width: 2px 1px 0px 0px ;
+}
+.lineTreeMidleRight{
+    border-width: 0px 1px 0px 0px ;
+}
+.lineTreeMidleLeft{
+    border-width: 0px 0px 0px 1px ;
+}
+.refContainerInputParaWay {
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: $primary-radius-border;
+    box-shadow: $secondary-elevation;
+    border:rgba(255, 255, 255, 0) solid 1px;
+}
+.containInputParaWay{
+    @extend .refContainerInputParaWay;
+    transition: $primary-transition;
+}
+.containInputParaWay:hover{
+    border:  solid 1px;
+    border-color: $blue-primary;
+    box-shadow: $third-elevation;
+}
+.selectedInputParaWay{
+    @extend .refContainerInputParaWay;
+    border-color: $red-primary;
+    
+}
+.editParaWay{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.questChoiceWayContain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 2.5rem;
+    
+}
+.questChoiceWay{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0.2rem 0.1rem 0.2rem 0.1rem;
+
+    padding: 0.1rem;
+    min-width: 90%;
+    height:auto;
+    color: $black-primary;
+    background-color: $gray-primary-1;
+    border-radius: $third-radius-border;
+
+}
+.zoneParagraphWay{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+ 
+}
+
+.paragraphWay{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0.1rem;
+    padding: 0.1rem;
+    min-width: 90%;
+    height:auto;
+    color: $black-primary;
+    background-color: $gray-primary-1;
+    border-radius: $third-radius-border;
+}
+
+.zoneChoiceInWay{
+    display: flex;
+    width: auto;
+    height: auto;
+    margin: 0rem;
+}
+
+//-------------------------- paragraph way----------------------------//
+
+.containerParagrphWay{
+    width: 100%;
+    height: 2.5rem;
+    // background-color: rgb(9, 9, 71);
+}
